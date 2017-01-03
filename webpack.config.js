@@ -59,7 +59,8 @@ const common = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/templates/index.html'
+            filename: 'index.html',
+            template: 'src/templates/app.html'
         })
     ],
     node: {
