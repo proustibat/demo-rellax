@@ -12,7 +12,11 @@
   "scripts": {
     "start": "webpack-dev-server --progress --profile --display-error-details --env start  ",
     "build": "webpack --env build",
+    "build:server": "webpack -p --config ./webpack.config.js",
     "test:lint": "eslint . --ext .js --ext .jsx || true"
+  },
+  "engines": {
+    "node": ">=0.12.0"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -30,9 +34,10 @@
     "handlebars-loader": "^1.4.0",
     "html-webpack-plugin": "^2.24.1",
     "json-loader": "^0.5.4",
-    "node-sass": "^4.1.0",
+    "node-sass": "^4.1.1",
+    "rellax": "^1.0.0",
     "required-loader": "^1.1.11",
-    "sass-loader": "^4.1.0",
+    "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.0-rc.1",
     "webpack-dev-server": "^1.16.2",
@@ -40,7 +45,6 @@
   },
   "dependencies": {
     "handlebars": "^4.0.6",
-    "lodash": "^4.17.2",
-    "rellax": "^1.0.0"
+    "lodash": "^4.17.2"
   }
 }

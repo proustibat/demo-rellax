@@ -2,6 +2,7 @@ import Utils from './Utils';
 import Config from './Config';
 import Module from './Module';
 import Rellax from 'Rellax';
+//let Rellax = require("rellax");
 
 class App {
 
