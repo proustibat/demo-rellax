@@ -1,0 +1,190 @@
+.module {
+
+  position: relative;
+  width: 150px;
+  min-height: 100px;
+  min-width: 100px;
+  transition: color 0.7s ease-in, background-color 0.7s ease-in;
+
+  .uid {
+    color: #fff;
+    position: absolute;
+    top: 8px;
+    width: 100%;
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    span {
+      padding: 2px 6px;
+      background: rgba(255, 255, 255, 0.4);
+      display: inline-block;
+    }
+  }
+
+  &.color-fav-yellow {
+    background: $color-fav-yellow;
+    @include randomSize();
+  }
+  &.color-fav-red-orange {
+    background: $color-fav-red-orange;
+    @include randomSize();
+  }
+  &.color-fav-violet {
+    background: $color-fav-violet;
+    @include randomSize();
+  }
+  &.color-fav-pink {
+    background: $color-fav-pink;
+    @include randomSize();
+  }
+  &.color-fav-orange {
+    background: $color-fav-orange;
+    @include randomSize();
+  }
+  &.color-fav-green {
+    background: $color-fav-green;
+    @include randomSize();
+  }
+  &.color-fav-green-blue {
+    background: $color-fav-green-blue;
+    @include randomSize();
+  }
+  &.color-fav-turquoise {
+    background: $color-fav-turquoise;
+    @include randomSize();
+  }
+  &.color-fav-blue {
+    background: $color-fav-blue;
+    @include randomSize();
+  }
+
+  .shape {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    margin: auto;
+    top: calc(50% - 20px);
+    background: $shape-color;
+
+    &.square {
+      -ms-transform: rotate(45deg); /* Internet Explorer */
+      -moz-transform: rotate(45deg); /* Firefox */
+      -webkit-transform: rotate(45deg); /* Safari et Chrome */
+      -o-transform: rotate(45deg); /* Opera */
+    }
+
+
+    &.circle {
+      border-radius: 25px;
+      background: $shape-color;
+    }
+
+
+    &.triangle {
+      width: 0;
+      height: 0;
+      top: calc(50% - 25px);
+      background: none;
+      &.triangle-up {
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 40px solid $shape-color;
+      }
+      &.triangle-down {
+        top: calc(50% - 15px);
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 40px solid $shape-color;
+      }
+      &.triangle-left {
+        border-top: 25px solid transparent;
+        border-right: 40px solid $shape-color;
+        border-bottom: 25px solid transparent;
+      }
+      &.triangle-right {
+        border-top: 25px solid transparent;
+        border-left: 40px solid $shape-color;
+        border-bottom: 25px solid transparent;
+      }
+    }
+
+
+    &.diamond {
+      border-style: solid;
+      border-color: transparent transparent $shape-color transparent;
+      border-width: 0 15px 15px 15px;
+      height: 0;
+      width: 30px;
+      position: relative;
+      background: none;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: -15px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: $shape-color transparent transparent transparent;
+        border-width: 35px 30px 0 30px;
+      }
+    }
+
+
+    &.star-five {
+      top: calc(50% - 10px);
+      position: relative;
+      display: block;
+      color: $shape-color;
+      width: 0px;
+      height: 0px;
+      border-right: 25px solid transparent;
+      border-bottom: 16px solid $shape-color;
+      border-left: 25px solid transparent;
+      -moz-transform:    rotate(35deg);
+      -webkit-transform: rotate(35deg);
+      -ms-transform:     rotate(35deg);
+      -o-transform:      rotate(35deg);
+      background: none;
+
+      &:before {
+        position: absolute;
+        height: 0;
+        width: 0;
+        display: block;
+        content: '';
+        -webkit-transform: rotate(-35deg);
+        -moz-transform:    rotate(-35deg);
+        -ms-transform:     rotate(-35deg);
+        -o-transform:      rotate(-35deg);
+        border-bottom: 20px solid $shape-color;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        top: -15px;
+        left: -17px;
+      }
+
+      &:after {
+        position: absolute;
+        display: block;
+        color: $shape-color;
+        -webkit-transform: rotate(-70deg);
+        -moz-transform:    rotate(-70deg);
+        -ms-transform:     rotate(-70deg);
+        -o-transform:      rotate(-70deg);
+        content: '';
+        top: 0;
+        left: -26px;
+        width: 0;
+        height: 0;
+        border-right: 25px solid transparent;
+        border-bottom: 17px solid $shape-color;
+        border-left: 25px solid transparent;
+      }
+    }
+  }
+
+
+
+}

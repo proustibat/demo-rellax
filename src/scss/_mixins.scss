@@ -1,0 +1,11 @@
+/// Random width and height
+/// @example css
+///   .block-element {
+///     @include randomSize();
+///   }
+@mixin randomSize() {
+  $random: random($module-size-max);
+  width: $random + px;
+  height: $random + px;
+  top: random($module-margin-max);
+}
