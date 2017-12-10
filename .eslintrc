@@ -88,7 +88,7 @@
         "no-multiple-empty-lines": 2,
         "no-spaced-func": 1,                                                       // Jamais d'espace entre l'appel d'une fonction et la parenthèse ouvrante de ses paramètres
         "space-before-function-paren": [2, "never"],
-        "no-trailing-spaces": 1,                                                   // Disallow trailing whitespace at the end of lines
+//        "no-trailing-spaces": 1,                                                   // Disallow trailing whitespace at the end of lines
         "keyword-spacing": [1, {"before": true, "after": true, "overrides": {}}], // if () ... else ()
         "object-curly-spacing": [2, "always"],
 //        "computed-property-spacing": [2, "never"],

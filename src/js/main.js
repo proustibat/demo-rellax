@@ -4,6 +4,7 @@ import Module from './Module';
 import Rellax from 'Rellax';
 
 class App {
+
     constructor() {
         for ( let i=0; i< Config.nbModules; i++ ) {
             let module = new Module({
@@ -33,5 +34,3 @@ App.prototype = Object.assign( App.prototype, {
 });
 
 new App();
-
-
