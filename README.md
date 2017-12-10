@@ -1,5 +1,7 @@
 # Rellax Demo
-I saw this parallax javascript library: https://github.com/dixonandmoe/rellax and decided to try it on a simple page.
+Simple demo of the [Rellax lib](https://github.com/dixonandmoe/rellax) 
+
+See the result here: [https://proustibat.github.io/demo-rellax](https://proustibat.github.io/demo-rellax/)
 
 ## Installation
 * run `npm install`
