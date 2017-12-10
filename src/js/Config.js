@@ -1,4 +1,4 @@
-var Config = {
+const Config = {
 
     shapes: [
         'star-five',

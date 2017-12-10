@@ -1,9 +1,6 @@
 {
-
-    // Extend existing configuration
-    // from ESlint and eslint-plugin-react defaults.
     "extends": [
-    "eslint:recommended", "plugin:react/recommended"
+    "eslint:recommended"
     ],
     "env": {
         "browser": true,
@@ -18,30 +15,24 @@
             "jsx": true
         }
     },
-    "plugins": [
-        "react"
-    ],
+
     "rules": {
-        "react/jsx-uses-vars": 1,
+//        "semi": [2, "always"],
+//        "comma-dangle": [1, "never"],       // Disallow trailing commas in object literals         // var obj = { name: 'coucou', }
+//        "no-cond-assign": 1,                // Disallow assignment in conditional expressions      // if (a = 5) { ... }
+//        "no-console": 0,                    // Allow console.log
+//        "no-dupe-keys": 1,                  // Disallow duplicate keys when creating object        // var obj = { name: 'michel', name: 'laurence' }
+//        "no-empty": 1,                      // Disallow empty statements                           // if (isCool) { }
+//        "no-extra-semi": 1,                 // Disallow unnecessary semicolons                     // var coucou = 'hello';;
+//        "no-func-assign": 1,                // Disallow overwriting functions written as function declarations
+//        "no-invalid-regexp": 1,             // Disallow invalid regular expression strings in the RegExp constructor
+//        "no-irregular-whitespace": 1,       // Disallow irregular whitespace outside of strings and comments
+//        "no-sparse-arrays": 2,              // Disallow sparse arrays                              // var items = [,,];
+//        "no-unreachable": 2,                // Disallow unreachable statements after a return, throw, continue, or break statement
+//        "valid-typeof": 2,                  // Disallow invalid string with typeof
+//        "no-warning-comments": [1, { "terms": ["@dev"], "location": "start" }], // @todo
 
-        // Possible Errors
 
-        "semi": [2, "always"],
-        "comma-dangle": [1, "never"],       // Disallow trailing commas in object literals         // var obj = { name: 'coucou', }
-        "no-cond-assign": 1,                // Disallow assignment in conditional expressions      // if (a = 5) { ... }
-        "no-console": 0,                    // Allow console.log
-        "no-dupe-keys": 1,                  // Disallow duplicate keys when creating object        // var obj = { name: 'michel', name: 'laurence' }
-        "no-empty": 1,                      // Disallow empty statements                           // if (isCool) { }
-        "no-extra-semi": 1,                 // Disallow unnecessary semicolons                     // var coucou = 'hello';;
-        "no-func-assign": 1,                // Disallow overwriting functions written as function declarations
-        "no-invalid-regexp": 1,             // Disallow invalid regular expression strings in the RegExp constructor
-        "no-irregular-whitespace": 1,       // Disallow irregular whitespace outside of strings and comments
-        "no-sparse-arrays": 2,              // Disallow sparse arrays                              // var items = [,,];
-        "no-unreachable": 2,                // Disallow unreachable statements after a return, throw, continue, or break statement
-        "valid-typeof": 2,                  // Disallow invalid string with typeof
-        "no-warning-comments": [1, { "terms": ["@dev"], "location": "start" }], // @todo
-
-        // Best Practices
 
         "curly": [2, "all"],                // Disallow no curly braces on if statements
         "dot-notation": 1,                  // Encourages use of dot notation whenever possible
@@ -68,7 +59,7 @@
 
         // Strict mode
 
-        "strict": [2, "never"],               // Strict mode (never)
+//        "strict": [2, "never"],               // Strict mode (never)
 
         // Variables
 
@@ -100,15 +91,13 @@
         "no-trailing-spaces": 1,                                                   // Disallow trailing whitespace at the end of lines
         "keyword-spacing": [1, {"before": true, "after": true, "overrides": {}}], // if () ... else ()
         "object-curly-spacing": [2, "always"],
-        "computed-property-spacing": [2, "never"],
-        "array-bracket-spacing": [2, "always"],
-        "space-in-parens": [2, "never"]                                            // Jamais d'espaces entre les parenthèse
+//        "computed-property-spacing": [2, "never"],
+        "array-bracket-spacing": [2, "always"]
+//        "space-in-parens": [2, "never"]                                            // Jamais d'espaces entre les parenthèse
     },
     "globals": {
         "require": false,
         "module":  false,
-        "console": false,
-        "ln": false,    // @todo Doit être spécifique à Workflow only
-        "process": true // @todo Doit être spécifique à Workflow only
+        "console": false
     }
 }
