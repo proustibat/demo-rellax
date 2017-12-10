@@ -1,6 +1,6 @@
 export default class Utils {
 
-    static guid () {
+    static guid() {
         return '#' + this.s4();
     }
 

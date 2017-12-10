@@ -4,7 +4,7 @@ const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CompressionPlugin = require("compression-webpack-plugin");
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const PATHS = {
     src: path.join(__dirname, 'src/js/main'),
@@ -45,17 +45,17 @@ const common = {
             },
             {
                 test: /\.hbs/,
-                loader: "handlebars-loader",
+                loader: 'handlebars-loader',
                 include: PATHS.templates
             }
         ]
     },
     resolve: {
         modules: [
-            "node_modules",
-            path.resolve(__dirname, "src")
+            'node_modules',
+            path.resolve(__dirname, 'src')
         ],
-        extensions: [".js", ".json", ".jsx", ".css", ".hbs"],
+        extensions: ['.js', '.json', '.jsx', '.css', '.hbs'],
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -64,7 +64,7 @@ const common = {
         })
     ],
     node: {
-        fs: "empty"
+        fs: 'empty'
     }
 
 };
@@ -112,8 +112,8 @@ module.exports = function(env) {
                     }),
                     new ExtractTextPlugin('[name].[chunkhash].css'),
                     new CompressionPlugin({
-                        asset: "[path].gz[query]",
-                        algorithm: "gzip",
+                        asset: '[path].gz[query]',
+                        algorithm: 'gzip',
                         test: /\.js$|\.html$/,
                         threshold: 10240,
                         minRatio: 0.8
