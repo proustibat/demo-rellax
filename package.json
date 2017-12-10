@@ -10,7 +10,7 @@
   ],
   "main": "src/js/main.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --profile --display-error-details --env start  ",
+    "start": "webpack-dev-server --progress --open --color --d",
     "build": "webpack --env build",
     "build:server": "webpack -p --config ./webpack.config.js",
     "test:lint": "eslint . --ext .js --ext .jsx || true"
@@ -38,9 +38,9 @@
     "required-loader": "1.1.11",
     "sass-loader": "4.1.1",
     "style-loader": "0.13.1",
-    "webpack": "2.2.0-rc.1",
-    "webpack-dev-server": "1.16.2",
-    "webpack-merge": "1.1.2"
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.9.7",
+    "webpack-merge": "4.1.1"
   },
   "dependencies": {
     "handlebars": "4.0.6",
