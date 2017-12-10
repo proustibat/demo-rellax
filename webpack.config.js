@@ -86,11 +86,11 @@ module.exports = function(env) {
                     rules: [
                         {
                             test: /\.s?css$/,
-                            loader: ExtractTextPlugin.extract({
-                                fallbackLoader: 'style-loader',
-                                loader: 'css-loader!sass-loader'
-                            }),
-                            include: PATHS.style
+                            include: PATHS.style,
+                            use: ExtractTextPlugin.extract({
+                                fallback: 'style-loader',
+                                use: ['css-loader', 'sass-loader']
+                            })
                         }
                     ]
                 },
