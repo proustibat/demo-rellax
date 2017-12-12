@@ -5,20 +5,20 @@ node_js:
 
 install:
   - npm install
-  - npm install -g webpack@3.10.0
-  - npm install -g babel-loader@7.1.2
-  - npm install -g css-loader@0.28.7
-  - npm install -g eslint-loader@1.9.0
-  - npm install -g handlebars-loader@1.6.0
-  - npm install -g required-loader@1.3.16
-  - npm install -g sass-loader@6.0.6
-  - npm install -g style-loader@0.19.0
-  - npm install -g json-loader@0.5.7
+#  - npm install -g webpack@3.10.0
+#  - npm install -g babel-loader@7.1.2
+#  - npm install -g css-loader@0.28.7
+#  - npm install -g eslint-loader@1.9.0
+#  - npm install -g handlebars-loader@1.6.0
+#  - npm install -g required-loader@1.3.16
+#  - npm install -g sass-loader@6.0.6
+#  - npm install -g style-loader@0.19.0
+#  - npm install -g json-loader@0.5.7
 #  - npm install -g webpack-dev-server@2.9.7
-  - npm install -g webpack-merge@4.1.1
-  - npm install -g clean-webpack-plugin@0.1.17
-  - npm install -g html-webpack-plugin@2.30.1
-  - npm install -g extract-text-webpack-plugin@3.0.2
+#  - npm install -g webpack-merge@4.1.1
+#  - npm install -g clean-webpack-plugin@0.1.17
+#  - npm install -g html-webpack-plugin@2.30.1
+#  - npm install -g extract-text-webpack-plugin@3.0.2
 #  - npm install -g babel-eslint@8.0.3
 #  - npm install -g babel-plugin-resolver@1.1.0
 #  - npm install -g node-sass@4.7.2
