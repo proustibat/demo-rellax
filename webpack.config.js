@@ -4,7 +4,6 @@ const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
 
 const PATHS = {
     src: path.join(__dirname, 'src/js/main'),
@@ -115,14 +114,7 @@ module.exports = function(env) {
                     new webpack.LoaderOptionsPlugin({
                         minimize: true
                     }),
-                    new ExtractTextPlugin('[name].[chunkhash].css'),
-                    new CompressionPlugin({
-                        asset: '[path].gz[query]',
-                        algorithm: 'gzip',
-                        test: /\.js$|\.html$/,
-                        threshold: 10240,
-                        minRatio: 0.8
-                    })
+                    new ExtractTextPlugin('[name].[chunkhash].css')
                 ]
             }
         );

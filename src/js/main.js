@@ -8,6 +8,7 @@ const Rellax = RellaxLib.default;
 class App {
 
     constructor() {
+        console.log('fou');
         for ( let i=0; i< Config.nbModules; i++ ) {
             let module = new Module({
                 uid: Utils.guid(),
