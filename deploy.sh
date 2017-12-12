@@ -7,3 +7,4 @@ rm -rf dist
 git commit -am "Deploy to Github Pages"
 #git push --force "https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git"
 git push --force
+git checkout master
