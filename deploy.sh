@@ -20,7 +20,7 @@ rev=$(git rev-parse --short HEAD)
 
 # We need to cd into wherever our website built.
 # With Jekyll, it's _site. But do whatever.
-cd dist
+cd stage/dist
 
 
 # First, we initialize a new git repository. Yes, a new one. You'll see.
