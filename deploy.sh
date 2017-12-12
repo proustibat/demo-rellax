@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "START DEPLOYING"
+ls -lah
+
 # stop executing if any errors occur, by default bash will just continue past any errors to run the next command
 # stop executing if an unset variable is encountered, by default bash will use an empty string for the value of such variables.
 set -o errexit -o nounset
@@ -20,7 +23,6 @@ rev=$(git rev-parse --short HEAD)
 
 # We need to cd into wherever our website built.
 # With Jekyll, it's _site. But do whatever.
-ls -lah
 cd stage/dist
 
 
