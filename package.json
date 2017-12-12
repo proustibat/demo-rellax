@@ -11,7 +11,7 @@
   "main": "src/js/main.js",
   "scripts": {
     "start": "webpack-dev-server --progress --open --color --d",
-    "build": "npm run test:lint && webpack --env build && open dist/index.html",
+    "build": "npm run test:lint && webpack --env build",
     "test:lint": "eslint . --ext .js --ext .jsx || true",
     "test": "npm run test:lint"
   },
