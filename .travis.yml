@@ -7,7 +7,8 @@ install:
   - npm install
 
 script:
-  - bash ./build.sh
+  - npm run build
+  - bash ./gco.sh
   - bash ./deploy.sh
 
 env:
