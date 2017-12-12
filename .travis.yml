@@ -7,7 +7,6 @@ install:
   - npm install
 
 script:
-  - ls -lah node_modules
   - npm run build
 
 # Here we want to check out where we are.
