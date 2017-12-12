@@ -14,6 +14,6 @@ npm run build
 
 # deploy
 git checkout gh-pages
-cp dist/* ./*
+#cp dist/* ./*
 #git commit -am "Deploy to Github Pages"
 #git push --force --quiet "https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git" master:gh-pages > /dev/null 2>&1
