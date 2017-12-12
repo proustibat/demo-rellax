@@ -12,7 +12,8 @@
   "scripts": {
     "start": "webpack-dev-server --progress --open --color --d",
     "build": "npm run test:lint && webpack --env build && open dist/index.html",
-    "test:lint": "eslint . --ext .js --ext .jsx || true"
+    "test:lint": "eslint . --ext .js --ext .jsx || true",
+    "test": "npm run test:lint"
   },
   "engines": {
     "node": ">=0.12.0"

@@ -1,0 +1,25 @@
+language: node_js
+
+node_js:
+  - stable
+
+#addons:
+#    code_climate:
+#        repo_token:
+
+install:
+  - npm install
+
+script:
+  - npm run build
+
+# Send coverage data to Coveralls
+#after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: pzvNyrsmnHqb418x32fs
+  on:
+    branch: master
+  local_dir: dist
