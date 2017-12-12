@@ -100,10 +100,10 @@
     }
 
     &.triangle-down {
-      top: calc(50% - 15px);
       border-left: 25px solid transparent;
       border-right: 25px solid transparent;
       border-top: 40px solid $shape-color;
+      top: calc(50% - 15px);
     }
 
     &.triangle-left {
@@ -126,17 +126,17 @@
       width: 30px;
       position: relative;
       background: none;
-      &:after {
-        content: "";
-        position: absolute;
-        top: 15px;
-        left: -15px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-color: $shape-color transparent transparent transparent;
-        border-width: 35px 30px 0 30px;
-      }
+    }
+    &.diamond:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: -15px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: $shape-color transparent transparent transparent;
+      border-width: 35px 30px 0 30px;
     }
 
 
@@ -153,34 +153,34 @@
       transform: rotate(35deg);
       background: none;
 
-      &:before {
-        position: absolute;
-        height: 0;
-        width: 0;
-        display: block;
-        content: '';
-        transform: rotate(-35deg);
-        border-bottom: 20px solid $shape-color;
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-        top: -15px;
-        left: -17px;
-      }
+    }
+    &.star-five:before {
+      position: absolute;
+      height: 0;
+      width: 0;
+      display: block;
+      content: '';
+      transform: rotate(-35deg);
+      border-bottom: 20px solid $shape-color;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      top: -15px;
+      left: -17px;
+    }
 
-      &:after {
-        position: absolute;
-        display: block;
-        color: $shape-color;
-        transform: rotate(-70deg);
-        content: '';
-        top: 0;
-        left: -26px;
-        width: 0;
-        height: 0;
-        border-right: 25px solid transparent;
-        border-bottom: 17px solid $shape-color;
-        border-left: 25px solid transparent;
-      }
+    &.star-five:after {
+      position: absolute;
+      display: block;
+      color: $shape-color;
+      transform: rotate(-70deg);
+      content: '';
+      top: 0;
+      left: -26px;
+      width: 0;
+      height: 0;
+      border-right: 25px solid transparent;
+      border-bottom: 17px solid $shape-color;
+      border-left: 25px solid transparent;
     }
   }
 }
