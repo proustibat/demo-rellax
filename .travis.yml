@@ -8,8 +8,13 @@ install:
 
 script:
   - npm run build
-  - bash ./gco.sh
-  - bash ./deploy.sh
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: pzvNyrsmnHqb418x32fs
+  on:
+    branch: master
 
 env:
   global:
