@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # deploy
 rm -rf *.js *.map *.gz *.css *.html
