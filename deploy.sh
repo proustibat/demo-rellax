@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# THANKS https://github.com/steveklabnik/automatically_update_github_pages_with_travis_example
+
 echo "START DEPLOYING"
 ls -lah
 
