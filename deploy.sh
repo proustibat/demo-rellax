@@ -2,8 +2,10 @@
 
 # THANKS https://github.com/steveklabnik/automatically_update_github_pages_with_travis_example
 
-echo "START DEPLOYING"
-ls -lah
+	echo -e "#####################################################"
+	echo -e " START DEPLOYING"
+	echo -e "#####################################################"
+    ls -lah
 
 # stop executing if any errors occur, by default bash will just continue past any errors to run the next command
 # stop executing if an unset variable is encountered, by default bash will use an empty string for the value of such variables.
