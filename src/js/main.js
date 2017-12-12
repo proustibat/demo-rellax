@@ -1,8 +1,7 @@
 import Utils  from './Utils';
 import Config from './Config';
 import Module from './Module';
-// import Rellax from 'Rellax';
-const Rellax = require('Rellax');
+import Rellax from 'Rellax';
 
 class App {
 
@@ -24,7 +23,7 @@ class App {
             this.container.appendChild( module.el );
         });
 
-        new Rellax( '.module' );
+        // new Rellax( '.module' );
     }
 
 }
