@@ -8,6 +8,7 @@ install:
 
 script:
   - npm run build
+  - ls -lah
 
 # Here we want to check out where we are.
 # We only want to update Github Pages if we're building
