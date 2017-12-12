@@ -52,12 +52,17 @@ const common = {
     },
     resolve: {
         modules: [
-            path.join('./node_modules'),
-            path.join(__dirname, 'node_modules'),
+            path.resolve('./node_modules'),
+            path.resolve(__dirname, 'node_modules'),
             'node_modules',
-            path.join(__dirname, '/src')
+            path.resolve(__dirname, '/src')
         ],
         extensions: ['.js', '.json', '.jsx', '.css', '.hbs'],
+        alias: {
+            'Rellax': path.resolve(__dirname, 'node_modules/rellax/rellax.js'),
+            // alias "module" -> "./app/third/module.js" and "module/file" results in error
+            // modules aliases are imported relative to the current context
+        },
     },
     plugins: [
         new HtmlWebpackPlugin({
