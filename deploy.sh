@@ -23,7 +23,7 @@ rev=$(git rev-parse --short HEAD)
 
 # We need to cd into wherever our website built.
 # With Jekyll, it's _site. But do whatever.
-cd stage/dist
+cd dist
 
 
 # First, we initialize a new git repository. Yes, a new one. You'll see.
@@ -38,6 +38,7 @@ git config user.email "jennifer.proust@gmail.com"
 # But we also interpolate that $GH_TOKEN variable,
 # which will allow us to push to this repository later.
 git remote add upstream "https://$GH_TOKEN@github.com/proustibat/demo-rellax.git"
+git remote -v
 
 # We then fetch it and reset to the gh-pages branch.
 # Now, git sees this new repository as just some files
@@ -55,10 +56,10 @@ git reset upstream/gh-pages
 # We then touch everything, so that git considers all of our local copies fresh.
 touch .
 
-
+git status
 # We then add all changes, commit them, using our rev from earlier, and then push to upstream.
 git add -A .
 git commit -m "rebuild pages at ${rev}"
 # The -q keeps this a bit more quiet, and you can control the noisiness
 # of all these different git commands with a judicious sprinkling of -q.
-git push -q upstream HEAD:gh-pages
+git push upstream HEAD:gh-pages
