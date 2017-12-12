@@ -20,7 +20,7 @@
 //        "semi": [2, "always"],
 //        "comma-dangle": [1, "never"],       // Disallow trailing commas in object literals         // var obj = { name: 'coucou', }
 //        "no-cond-assign": 1,                // Disallow assignment in conditional expressions      // if (a = 5) { ... }
-//        "no-console": 0,                    // Allow console.log
+        "no-console": 0,                    // Allow console.log
 //        "no-dupe-keys": 1,                  // Disallow duplicate keys when creating object        // var obj = { name: 'michel', name: 'laurence' }
 //        "no-empty": 1,                      // Disallow empty statements                           // if (isCool) { }
 //        "no-extra-semi": 1,                 // Disallow unnecessary semicolons                     // var coucou = 'hello';;
