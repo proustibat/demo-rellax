@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/proustibat/demo-rellax.svg?branch=master)](https://travis-ci.org/proustibat/demo-rellax)
+[![Build Status](https://travis-ci.org/proustibat/demo-rellax.svg?branch=master)](https://travis-ci.org/proustibat/demo-rellax) [![Maintainability](https://api.codeclimate.com/v1/badges/9127be6217414ff8fddf/maintainability)](https://codeclimate.com/github/proustibat/demo-rellax/maintainability)
 
 # Rellax Demo 
 Simple demo of the [Rellax lib](https://github.com/dixonandmoe/rellax) 
