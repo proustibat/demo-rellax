@@ -6,7 +6,7 @@
   width: 150px;
 
   .uid {
-    color: white;
+    color: $color-light;
     font-size: 10px;
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@
     z-index: 1;
 
     span {
-      background: rgba(255, 255, 255, .4);
+      background: $color-bg-uid;
       display: inline-block;
       padding: 2px 6px;
     }
@@ -26,34 +26,42 @@
     @include random-size();
     background: $color-fav-yellow;
   }
+
   &.color-fav-red-orange {
     @include random-size();
     background: $color-fav-red-orange;
   }
+
   &.color-fav-violet {
     @include random-size();
     background: $color-fav-violet;
   }
+
   &.color-fav-pink {
     @include random-size();
     background: $color-fav-pink;
   }
+
   &.color-fav-orange {
     @include random-size();
     background: $color-fav-orange;
   }
+
   &.color-fav-green {
     @include random-size();
     background: $color-fav-green;
   }
+
   &.color-fav-green-blue {
     @include random-size();
     background: $color-fav-green-blue;
   }
+
   &.color-fav-turquoise {
     @include random-size();
     background: $color-fav-turquoise;
   }
+
   &.color-fav-blue {
     @include random-size();
     background: $color-fav-blue;
@@ -68,47 +76,47 @@
     background: $shape-color;
 
     &.square {
-      -ms-transform: rotate(45deg); /* Internet Explorer */
-      -moz-transform: rotate(45deg); /* Firefox */
-      -webkit-transform: rotate(45deg); /* Safari et Chrome */
-      -o-transform: rotate(45deg); /* Opera */
+      transform: rotate(45deg);
     }
 
 
     &.circle {
-      border-radius: 25px;
       background: $shape-color;
+      border-radius: 25px;
     }
 
 
     &.triangle {
-      width: 0;
+      background: none;
       height: 0;
       top: calc(50% - 25px);
-      background: none;
-      &.triangle-up {
-        border-left: 25px solid transparent;
-        border-right: 25px solid transparent;
-        border-bottom: 40px solid $shape-color;
-      }
-      &.triangle-down {
-        top: calc(50% - 15px);
-        border-left: 25px solid transparent;
-        border-right: 25px solid transparent;
-        border-top: 40px solid $shape-color;
-      }
-      &.triangle-left {
-        border-top: 25px solid transparent;
-        border-right: 40px solid $shape-color;
-        border-bottom: 25px solid transparent;
-      }
-      &.triangle-right {
-        border-top: 25px solid transparent;
-        border-left: 40px solid $shape-color;
-        border-bottom: 25px solid transparent;
-      }
+      width: 0;
     }
 
+    &.triangle-up {
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 40px solid $shape-color;
+    }
+
+    &.triangle-down {
+      top: calc(50% - 15px);
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-top: 40px solid $shape-color;
+    }
+
+    &.triangle-left {
+      border-top: 25px solid transparent;
+      border-right: 40px solid $shape-color;
+      border-bottom: 25px solid transparent;
+    }
+
+    &.triangle-right {
+      border-top: 25px solid transparent;
+      border-left: 40px solid $shape-color;
+      border-bottom: 25px solid transparent;
+    }
 
     &.diamond {
       border-style: solid;
@@ -142,10 +150,7 @@
       border-right: 25px solid transparent;
       border-bottom: 16px solid $shape-color;
       border-left: 25px solid transparent;
-      -moz-transform:    rotate(35deg);
-      -webkit-transform: rotate(35deg);
-      -ms-transform:     rotate(35deg);
-      -o-transform:      rotate(35deg);
+      transform: rotate(35deg);
       background: none;
 
       &:before {
@@ -154,10 +159,7 @@
         width: 0;
         display: block;
         content: '';
-        -webkit-transform: rotate(-35deg);
-        -moz-transform:    rotate(-35deg);
-        -ms-transform:     rotate(-35deg);
-        -o-transform:      rotate(-35deg);
+        transform: rotate(-35deg);
         border-bottom: 20px solid $shape-color;
         border-left: 7px solid transparent;
         border-right: 7px solid transparent;
@@ -169,10 +171,7 @@
         position: absolute;
         display: block;
         color: $shape-color;
-        -webkit-transform: rotate(-70deg);
-        -moz-transform:    rotate(-70deg);
-        -ms-transform:     rotate(-70deg);
-        -o-transform:      rotate(-70deg);
+        transform: rotate(-70deg);
         content: '';
         top: 0;
         left: -26px;
