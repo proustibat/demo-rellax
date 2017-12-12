@@ -1,0 +1,20 @@
+JavaScript: true
+Ruby: true
+Python: false
+PHP: false
+
+exclude_paths:
+- test/**/*
+- vendor/**/*
+- node_modules/**/*
+- webpack.config.js
+
+plugins:
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+  scss-lint:
+      enabled: true
+  stylelint:
+      enabled: true

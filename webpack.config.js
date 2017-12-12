@@ -59,9 +59,7 @@ const common = {
         ],
         extensions: ['.js', '.json', '.jsx', '.css', '.hbs'],
         alias: {
-            'Rellax': path.resolve(__dirname, 'node_modules/rellax/rellax.js'),
-            // alias "module" -> "./app/third/module.js" and "module/file" results in error
-            // modules aliases are imported relative to the current context
+            'Rellax': path.resolve(__dirname, 'node_modules/rellax/rellax.js')
         },
     },
     plugins: [
