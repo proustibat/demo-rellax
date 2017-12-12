@@ -1,9 +1,9 @@
 /// Random width and height
 /// @example css
 ///   .block-element {
-///     @include randomSize();
+///     @include random-size();
 ///   }
-@mixin randomSize() {
+@mixin random-size() {
   $random: random($module-size-max);
   width: $random + px;
   height: $random + px;
