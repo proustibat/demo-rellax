@@ -8,7 +8,7 @@ const Rellax = RellaxLib.default;
 class App {
 
     constructor() {
-        for ( let i=0; i< Config.nbModules; i++ ) {
+        for ( let i = 0; i < Config.nbModules; i++ ) {
             let module = new Module({
                 uid: Utils.guid(),
                 type: Config.shapes[ Math.floor( Math.random() * Config.shapes.length ) ],
@@ -21,11 +21,33 @@ class App {
     }
 
     render() {
-        Array.from( this.modules, module => {
+        const header = this.container.parentElement.querySelector('header');
+
+        const btnSwitcherGray = document.createElement( 'button' );
+        header.appendChild( btnSwitcherGray );
+        btnSwitcherGray.setAttribute('id', 'btn-switcher-gray');
+        btnSwitcherGray.setAttribute('class', 'btn');
+        btnSwitcherGray.addEventListener('click', e => document.body.classList.toggle( 'b-w' ) );
+
+
+        const btnEnableShadows= document.createElement( 'button' );
+        header.appendChild( btnEnableShadows );
+        btnEnableShadows.setAttribute('id', 'btn-enable-shadows');
+        btnEnableShadows.setAttribute('class', 'btn');
+        btnEnableShadows.addEventListener('click', e => document.body.classList.toggle( 'shadows-enabled' ) );
+
+        this.modules.forEach( module => {
             this.container.appendChild( module.el );
         });
 
+        // this.container.style.height = this.container.scrollHeight + this.container.offsetTop;
+
         new Rellax( '.module' );
+
+        console.dir(document.body);
+        console.dir(this.container);
+        // console.log(document.body.height + this.container.offsetTop);
+
     }
 
 }

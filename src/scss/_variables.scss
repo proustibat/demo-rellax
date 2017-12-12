@@ -46,13 +46,22 @@ $module-margin-max: 100;
 
 /// Shapes color
 /// @type Color
-$shape-color: #000;
+$shape-color: #171717;
 
 /// Light color
 /// @type Color
-$color-light: #ffffff;
+$color-light: #fff;
 
 
 /// Background uid color
 /// @type Color
-$color-bg-uid: rgba(255, 255, 255, .4);
+$color-bg-uid: rgba(23, 23, 23, 0.4);
+
+/// Drop shadow color module
+/// @type Color
+$color-drop-shadow-module: rgba(23, 23, 23, 0.4);
+
+
+/// Drop shadow color module
+/// @type Color
+$color-drop-shadow-shape: rgba(255, 255, 255, 0.4);

@@ -4,4 +4,59 @@ body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   text-transform: uppercase;
+  transition : filter 500ms ease;
+  overflow: auto;
+
+
+  .btn {
+    background-color: $shape-color;
+    color: $color-light;
+    //border: none;
+    //color: white;
+    padding: .5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 1rem;
+    outline: none;
+    border: 1px solid $shape-color;
+    transition : filter 300ms ease;
+  }
+
+  #btn-switcher-gray:before {
+    content: 'Switch to gray'
+  }
+
+  &.b-w {
+    filter: grayscale(1);
+    #btn-switcher-gray {
+      filter: invert(100%);
+    }
+    #btn-switcher-gray:before {
+       content: 'Switch to colors'
+    }
+  }
+
+
+  #btn-enable-shadows:before {
+    content: 'Enable shadows'
+  }
+
+  &.shadows-enabled #btn-enable-shadows {
+    filter: invert(100%);
+  }
+
+  &.shadows-enabled #btn-enable-shadows:before {
+    content: 'Disable shadows'
+  }
+
+
+
+}
+
+.app {
+  //overflow: auto;
+  background: mediumpurple;
 }

@@ -2,8 +2,10 @@
   min-height: 100px;
   min-width: 100px;
   position: relative;
-  transition: color .7s ease-in, background-color .7s ease-in;
   width: 150px;
+  transition : filter 500ms ease;
+  //-webkit-filter:drop-shadow(0 10px 10px $color-drop-shadow-module);
+  //filter:drop-shadow(0 10px 10px $color-drop-shadow-module);
 
   .uid {
     color: $color-light;
@@ -74,6 +76,10 @@
     margin: auto;
     top: calc(50% - 20px);
     background: $shape-color;
+    transition : filter 500ms ease;
+    //box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4), 0 6px 20px 0 rgba(255, 255, 255, 0.4);
+    //-webkit-filter:drop-shadow(0px 4px 8px $color-drop-shadow-shape);
+    //filter:drop-shadow(0 10px 5px $color-drop-shadow-shape);
 
     &.square {
       transform: rotate(45deg);
@@ -182,5 +188,19 @@
       border-bottom: 17px solid $shape-color;
       border-left: 25px solid transparent;
     }
+  }
+}
+
+.shadows-enabled {
+  .module {
+    -webkit-filter: drop-shadow(0 10px 10px $color-drop-shadow-module);
+    filter: drop-shadow(0 10px 10px $color-drop-shadow-module);
+
+  }
+  .shape {
+    //box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4), 0 6px 20px 0 rgba(255, 255, 255, 0.4);
+    -webkit-filter:drop-shadow(0px 4px 8px $color-drop-shadow-shape);
+    filter:drop-shadow(0 10px 5px $color-drop-shadow-shape);
+
   }
 }
