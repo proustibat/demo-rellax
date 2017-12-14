@@ -24,11 +24,11 @@ const Config = {
     ],
 
     speeds: {
-        min: -5,
-        max: 5
+        min: -4,
+        max: 4
     },
 
-    nbModules: 15
+    nbModules: 12
 };
 
 export default Config;

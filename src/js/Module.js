@@ -15,7 +15,7 @@ export default class Module {
             el.appendChild( div.childNodes[ 0 ] );
         }
         this.el = el.childNodes[ 0 ];
-        this.el.style.left = Utils.randomIntInclusive( 50, ( document.body.offsetWidth - 250 ) );
+        this.el.style.left = Utils.randomIntInclusive( 50, ( document.body.offsetWidth - 250 ) ) / document.body.offsetWidth * 100 + '%';
         return this;
     }
 }

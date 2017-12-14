@@ -1,9 +1,9 @@
 import Utils  from './Utils';
 import Config from './Config';
 import Module from './Module';
-// import Rellax from 'Rellax';
-import * as RellaxLib from 'Rellax';
-const Rellax = RellaxLib.default;
+import Rellax from 'Rellax';
+// import * as RellaxLib from 'Rellax';
+// const Rellax = RellaxLib.default;
 
 class App {
 
@@ -17,37 +17,61 @@ class App {
             });
             this.modules.push( module.render() );
         }
+        this.scrollListener = this.onScroll.bind( this );
         this.render();
     }
 
     render() {
-        const header = this.container.parentElement.querySelector('header');
+        const header = this.container.parentElement.querySelector( 'header' );
 
         const btnSwitcherGray = document.createElement( 'button' );
         header.appendChild( btnSwitcherGray );
-        btnSwitcherGray.setAttribute('id', 'btn-switcher-gray');
-        btnSwitcherGray.setAttribute('class', 'btn');
-        btnSwitcherGray.addEventListener('click', e => document.body.classList.toggle( 'b-w' ) );
+        btnSwitcherGray.setAttribute( 'id', 'btn-switcher-gray' );
+        btnSwitcherGray.setAttribute( 'class', 'btn' );
+        btnSwitcherGray.addEventListener('click', () => document.body.classList.toggle( 'b-w' ) );
 
 
-        const btnEnableShadows= document.createElement( 'button' );
+        const btnEnableShadows = document.createElement( 'button' );
         header.appendChild( btnEnableShadows );
-        btnEnableShadows.setAttribute('id', 'btn-enable-shadows');
-        btnEnableShadows.setAttribute('class', 'btn');
-        btnEnableShadows.addEventListener('click', e => document.body.classList.toggle( 'shadows-enabled' ) );
+        btnEnableShadows.setAttribute( 'id', 'btn-enable-shadows' );
+        btnEnableShadows.setAttribute( 'class', 'btn' );
+        btnEnableShadows.addEventListener('click', () => document.body.classList.toggle( 'shadows-enabled' ) );
+
+
+        const btnRellax = document.createElement( 'button' );
+        header.appendChild( btnRellax );
+        btnRellax.setAttribute('id', 'btn-disable-rellax');
+        btnRellax.setAttribute('class', 'btn');
+        btnRellax.addEventListener('click', () => this.toggleParallax() );
 
         this.modules.forEach( module => {
             this.container.appendChild( module.el );
         });
 
-        // this.container.style.height = this.container.scrollHeight + this.container.offsetTop;
+        this.enableParallax();
+    }
 
-        new Rellax( '.module' );
+    toggleParallax() {
+        document.body.classList.toggle( 'rellax-disabled' );
+        this.rellaxInstance ? this.disableParallax() : this.enableParallax();
+    }
 
-        console.dir(document.body);
-        console.dir(this.container);
-        // console.log(document.body.height + this.container.offsetTop);
+    enableParallax() {
+        this.rellaxInstance = new Rellax( '.module' );
+        window.addEventListener( 'scroll', this.scrollListener );
+    }
 
+
+    disableParallax() {
+        window.removeEventListener( 'scroll', this.scrollListener );
+        this.rellaxInstance.destroy();
+        this.rellaxInstance = null;
+    }
+
+    onScroll() {
+        this.container.style.height = Math.max( ...Array.prototype.map.call(
+            this.rellaxInstance.elems, item => item.offsetTop + Utils.getTranslateYValue( item.style.transform )
+        ) ) + 'px';
     }
 
 }

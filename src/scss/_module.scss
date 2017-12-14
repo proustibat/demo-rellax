@@ -3,9 +3,7 @@
   min-width: 100px;
   position: relative;
   width: 150px;
-  transition : filter 500ms ease;
-  //-webkit-filter:drop-shadow(0 10px 10px $color-drop-shadow-module);
-  //filter:drop-shadow(0 10px 10px $color-drop-shadow-module);
+  transition : filter 400ms ease;
 
   .uid {
     color: $color-light;
@@ -76,10 +74,7 @@
     margin: auto;
     top: calc(50% - 20px);
     background: $shape-color;
-    transition : filter 500ms ease;
-    //box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4), 0 6px 20px 0 rgba(255, 255, 255, 0.4);
-    //-webkit-filter:drop-shadow(0px 4px 8px $color-drop-shadow-shape);
-    //filter:drop-shadow(0 10px 5px $color-drop-shadow-shape);
+    transition : filter 400ms ease;
 
     &.square {
       transform: rotate(45deg);
@@ -198,7 +193,6 @@
 
   }
   .shape {
-    //box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4), 0 6px 20px 0 rgba(255, 255, 255, 0.4);
     -webkit-filter:drop-shadow(0px 4px 8px $color-drop-shadow-shape);
     filter:drop-shadow(0 10px 5px $color-drop-shadow-shape);
 
