@@ -5,79 +5,54 @@ body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   text-transform: uppercase;
-  transition : filter 500ms ease;
+  transition: filter 500ms ease;
   overflow: auto;
   margin: 0;
   padding: 0;
 
-
-  header {
-    padding: 2rem;
-  }
-  h1 {
-    padding: 0;
-    margin: 0;
-  }
-
-
-  .btn {
-    background-color: $shape-color;
-    color: $color-light;
-    padding: .5rem 1rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    cursor: pointer;
-    margin: 0 .5rem;
-    outline: none;
-    border: 1px solid $shape-color;
-    transition : filter 300ms ease;
-  }
-
-  #btn-switcher-gray:before {
-    content: 'Switch to gray'
-  }
-
-  &.b-w {
-    filter: grayscale(1);
-    #btn-switcher-gray {
-      filter: invert(100%);
-    }
-    #btn-switcher-gray:before {
-       content: 'Switch to colors'
-    }
-  }
-
-
-  #btn-enable-shadows:before {
-    content: 'Enable shadows'
-  }
-
-  &.shadows-enabled #btn-enable-shadows {
-    filter: invert(100%);
-  }
-
-  &.shadows-enabled #btn-enable-shadows:before {
-    content: 'Disable shadows'
-  }
-
-
-
-  #btn-disable-rellax:before {
-    content: 'Disable Parallax'
-  }
-
-  &.rellax-disabled #btn-disable-rellax {
-    filter: invert(100%);
-  }
-
-  &.rellax-disabled #btn-disable-rellax:before {
-    content: 'Enable Parallax'
-  }
-
+}
+header {
+  padding: 2rem;
+}
+h1 {
+  padding: 0;
+  margin: 0;
 }
 
-.app {
-  //overflow: auto;
+
+.btn {
+  background-color: $shape-color;
+  color: $color-light;
+  padding: .5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  margin: 0 .5rem;
+  outline: none;
+  border: 1px solid $shape-color;
+  transition : filter 300ms ease;
+}
+
+
+@include toggle-button('.btn-switcher-gray',
+        'Switch to gray',
+        'Switch to colors',
+        '.b-w'
+);
+@include toggle-button('.btn-enable-shadows',
+        'Enable shadows',
+        'Disable shadows',
+        '.shadows-enabled'
+);
+@include toggle-button('.btn-disable-rellax',
+        'Disable Parallax',
+        'Enable Parallax',
+        '.rellax-disabled'
+);
+
+
+.b-w {
+  filter: grayscale(1);
 }

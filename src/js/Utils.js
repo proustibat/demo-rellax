@@ -14,12 +14,6 @@ export default class Utils {
         return Math.floor( Math.random() * ( Math.floor( max ) - Math.ceil( min ) + 1 ) ) + Math.ceil( min );
     }
 
-    static getTranslateXValue( translateString ){
-        const n = translateString.indexOf( '(' );
-        const n1 = translateString.indexOf( ',' );
-        return parseInt( translateString.slice( n + 1, n1 - 2 ) );
-    }
-
     static getTranslateYValue( translateString ) {
         const n = translateString.indexOf( ',' );
         const n1 = translateString.indexOf( ')' );

@@ -9,3 +9,17 @@
   height: $random + px;
   //top: random($module-margin-max);
 }
+
+@mixin toggle-button($btnSelector, $disablingText, $enablingText, $parentActivatorClass) {
+  #{$btnSelector} {
+    &:before {
+      content: $disablingText
+    }
+    #{$parentActivatorClass} & {
+      filter: invert(100%);
+      &:before {
+        content: $enablingText
+      }
+    }
+  }
+}

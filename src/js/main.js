@@ -26,22 +26,22 @@ class App {
 
         const btnSwitcherGray = document.createElement( 'button' );
         header.appendChild( btnSwitcherGray );
-        btnSwitcherGray.setAttribute( 'id', 'btn-switcher-gray' );
-        btnSwitcherGray.setAttribute( 'class', 'btn' );
+        // btnSwitcherGray.setAttribute( 'id', 'btn-switcher-gray' );
+        btnSwitcherGray.setAttribute( 'class', 'btn btn-switcher-gray' );
         btnSwitcherGray.addEventListener('click', () => document.body.classList.toggle( 'b-w' ) );
 
 
         const btnEnableShadows = document.createElement( 'button' );
         header.appendChild( btnEnableShadows );
-        btnEnableShadows.setAttribute( 'id', 'btn-enable-shadows' );
-        btnEnableShadows.setAttribute( 'class', 'btn' );
+        // btnEnableShadows.setAttribute( 'id', 'btn-enable-shadows' );
+        btnEnableShadows.setAttribute( 'class', 'btn btn-enable-shadows' );
         btnEnableShadows.addEventListener('click', () => document.body.classList.toggle( 'shadows-enabled' ) );
 
 
         const btnRellax = document.createElement( 'button' );
         header.appendChild( btnRellax );
-        btnRellax.setAttribute('id', 'btn-disable-rellax');
-        btnRellax.setAttribute('class', 'btn');
+        // btnRellax.setAttribute('id', 'btn-disable-rellax');
+        btnRellax.setAttribute('class', 'btn btn-disable-rellax');
         btnRellax.addEventListener('click', () => this.toggleParallax() );
 
         this.modules.forEach( module => {
