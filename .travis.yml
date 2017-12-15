@@ -41,6 +41,8 @@ install:
 #  - sh -e /etc/init.d/xvfb start
 
 before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
   - |
     bash -c "
       if [ ! -z "$CC_TEST_REPORTER_ID" ]; then
