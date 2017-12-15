@@ -39,6 +39,7 @@ before_script:
 
 script:
   - npm run test
+  - bundle exec rspec
   - npm run build
 
 after_script:
