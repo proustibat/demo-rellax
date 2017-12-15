@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for App.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> App.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>25/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">36.36% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">78.13% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>25/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Utils  from './Utils';
+import Config from './Config';
+import Module from './Module';
+import Rellax from 'Rellax';
+// import * as RellaxLib from 'Rellax';
+// const Rellax = RellaxLib.default;
+&nbsp;
+export default class App {
+&nbsp;
+    constructor() {
+&nbsp;
+        this.container = document.body.querySelector( '.app' );
+        this.modules = [];
+&nbsp;
+        for ( let i = 0; i &lt; Config.nbModules; i++ ) {
+            let module = new Module({
+                uid: Utils.guid(),
+                type: Config.shapes[ Math.floor( Math.random() * Config.shapes.length ) ],
+                color: Config.colors[ Math.floor( Math.random() * Config.colors.length ) ],
+                speed: Math.floor( Math.random() * ( Config.speeds.max - Config.speeds.min ) + Config.speeds.min )
+            });
+            this.modules.push( module.render() );
+        }
+        this.scrollListener = this.onScroll.bind( this );
+        this.render();
+    }
+&nbsp;
+    render() {
+        const header = this.container.parentElement.querySelector( 'header' );
+&nbsp;
+        const btnSwitcherGray = document.createElement( 'button' );
+        header.appendChild( btnSwitcherGray );
+        // btnSwitcherGray.setAttribute( 'id', 'btn-switcher-gray' );
+        btnSwitcherGray.setAttribute( 'class', 'btn btn-switcher-gray' );
+        btnSwitcherGray.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >document.body.classList.toggle( 'b-w' ) </span>);
+&nbsp;
+&nbsp;
+        const btnEnableShadows = document.createElement( 'button' );
+        header.appendChild( btnEnableShadows );
+        // btnEnableShadows.setAttribute( 'id', 'btn-enable-shadows' );
+        btnEnableShadows.setAttribute( 'class', 'btn btn-enable-shadows' );
+        btnEnableShadows.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >document.body.classList.toggle( 'shadows-enabled' ) </span>);
+&nbsp;
+&nbsp;
+        const btnRellax = document.createElement( 'button' );
+        header.appendChild( btnRellax );
+        // btnRellax.setAttribute('id', 'btn-disable-rellax');
+        btnRellax.setAttribute('class', 'btn btn-disable-rellax');
+        btnRellax.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.toggleParallax() </span>);
+&nbsp;
+        this.modules.forEach( module =&gt; {
+            this.container.appendChild( module.el );
+        });
+&nbsp;
+        this.enableParallax();
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    to</span>ggleParallax() {
+<span class="cstat-no" title="statement not covered" >        document.body.classList.toggle( 'rellax-disabled' );</span>
+<span class="cstat-no" title="statement not covered" >        this.rellaxInstance ? this.disableParallax() : this.enableParallax();</span>
+    }
+&nbsp;
+    enableParallax() {
+        this.rellaxInstance = new Rellax( '.module' );
+        window.addEventListener( 'scroll', this.scrollListener );
+    }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    di</span>sableParallax() {
+<span class="cstat-no" title="statement not covered" >        window.removeEventListener( 'scroll', this.scrollListener );</span>
+<span class="cstat-no" title="statement not covered" >        this.rellaxInstance.destroy();</span>
+<span class="cstat-no" title="statement not covered" >        this.rellaxInstance = null;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    on</span>Scroll() {
+<span class="cstat-no" title="statement not covered" >        this.container.style.height = Math.max( ...Array.prototype.map.call(</span>
+            this.rellaxInstance.elems, <span class="fstat-no" title="function not covered" >it</span>em =&gt; <span class="cstat-no" title="statement not covered" >item.offsetTop + Utils.getTranslateYValue( item.style.transform )</span>
+        ) ) + 'px';
+    }
+&nbsp;
+}
+&nbsp;
+// App.prototype = Object.assign( App.prototype, {
+//     container: document.body.querySelector( '.app' ),
+//     modules: []
+// });</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Dec 15 2017 20:14:49 GMT+0100 (CET)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

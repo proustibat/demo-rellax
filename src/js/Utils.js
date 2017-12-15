@@ -20,3 +20,7 @@ export default class Utils {
         return parseInt( translateString.slice( n + 1, n1 - 1 ) );
     }
 }
+
+// We export the Rectangle class so it can
+// be require()'d in other files.
+// module.exports = Utils;
