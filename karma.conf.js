@@ -30,7 +30,19 @@ module.exports =  config => {
                     { test: /\.js?$/, exclude: /node_modules/, loader: 'babel-loader' },
                     { test: /\.hbs$/, loader: 'handlebars-loader' }
                 ]
-            }
+            },
+            resolve: {
+                modules: [
+                    path.resolve('./node_modules'),
+                    path.resolve(__dirname, 'node_modules'),
+                    'node_modules',
+                    path.resolve(__dirname, '/src')
+                ],
+                extensions: ['.js', '.json', '.jsx', '.css', '.hbs'],
+                alias: {
+                    'Rellax': path.resolve(__dirname, 'node_modules/rellax/rellax.js')
+                },
+            },
         },
         // webpackMiddleware: {
         //     stats: {

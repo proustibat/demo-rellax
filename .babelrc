@@ -3,11 +3,11 @@
     [ "es2015", { "modules": false } ]
   ],
   "plugins": [
-    [ "resolver", { "resolveDirs": [ "src", "node_modules", "node_modules/rellax" ] } ],
-    [ "istanbul", {
-      "exclude": [
-        "tests/**/*.js"
-      ]
-    }]
+    [ "resolver", { "resolveDirs": [ "src", "node_modules", "node_modules/rellax" ] } ]
+//    [ "istanbul", {
+//      "exclude": [
+//        "tests/**/*.js"
+//      ]
+//    }]
   ]
 }
