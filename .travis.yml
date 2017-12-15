@@ -31,7 +31,7 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 
 script:
-  - npm run test
+  - npm run test:local
   - npm run build
 
 # Here we want to check out where we are.
