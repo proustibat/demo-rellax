@@ -8,6 +8,7 @@ exclude_paths:
 - vendor/**/*
 - node_modules/**/*
 - webpack.config.js
+- karma.conf.js
 - coverage/
 
 plugins:
