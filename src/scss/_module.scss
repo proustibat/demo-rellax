@@ -68,13 +68,13 @@
   }
 
   .shape {
-    position: relative;
-    height: 40px;
-    width: 40px;
-    margin: auto;
-    top: calc(50% - 20px);
     background: $shape-color;
-    transition : filter 400ms ease;
+    height: 40px;
+    margin: auto;
+    position: relative;
+    top: calc(50% - 20px);
+    transition: filter 400ms ease;
+    width: 40px;
 
     &.square {
       transform: rotate(45deg);
@@ -123,14 +123,14 @@
       background: none;
       border-color: transparent transparent $shape-color;
       border-style: solid;
-      border-width: 0 15px 15px 15px;
+      border-width: 0 15px 15px;
       height: 0;
       position: relative;
       width: 30px;
     }
 
     &.diamond::after {
-      border-color: $shape-color transparent transparent transparent;
+      border-color: $shape-color transparent transparent;
       border-style: solid;
       border-width: 35px 30px 0;
       content: '';
@@ -149,25 +149,25 @@
       border-right: 25px solid transparent;
       color: $shape-color;
       display: block;
-      height: 0px;
+      height: 0;
       position: relative;
       top: calc(50% - 10px);
       transform: rotate(35deg);
-      width: 0px;
+      width: 0;
     }
 
     &.star-five::before {
-      position: absolute;
-      height: 0;
-      width: 0;
-      display: block;
-      content: '';
-      transform: rotate(-35deg);
       border-bottom: 20px solid $shape-color;
       border-left: 7px solid transparent;
       border-right: 7px solid transparent;
-      top: -15px;
+      content: '';
+      display: block;
+      height: 0;
       left: -17px;
+      position: absolute;
+      top: -15px;
+      transform: rotate(-35deg);
+      width: 0;
     }
 
     &.star-five::after {
@@ -189,7 +189,7 @@
 
 .shadows-enabled {
   .module {
-    @include prefix((filter: drop-shadow(0 10px 10px $color-drop-shadow-module )), webkit moz);
+    @include prefix((filter: drop-shadow(0 10px 10px $color-drop-shadow-module)), webkit moz);
   }
 
   .shape {

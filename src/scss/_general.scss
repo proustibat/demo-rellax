@@ -3,18 +3,18 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
   text-align: center;
   text-transform: uppercase;
   transition: filter 500ms ease;
-  overflow: auto;
-  margin: 0;
-  padding: 0;
-
 }
 
 header {
   padding: 2rem;
 }
+
 h1 {
   margin: 0;
   padding: 0;
@@ -33,7 +33,7 @@ h1 {
   padding: .5rem 1rem;
   text-align: center;
   text-decoration: none;
-  transition : filter 300ms ease;
+  transition: filter 300ms ease;
 }
 
 

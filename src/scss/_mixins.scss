@@ -20,14 +20,14 @@
   #{$btn-selector} {
 
     &::before {
-      content: $disabling-text
+      content: $disabling-text;
     }
 
     #{$parent-activator-class} & {
       filter: invert(100%);
 
       &::before {
-        content: $enabling-text
+        content: $enabling-text;
       }
     }
   }
