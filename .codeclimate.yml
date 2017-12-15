@@ -4,7 +4,7 @@ Python: false
 PHP: false
 
 exclude_paths:
-- test/**/*
+- tests/**/*
 - vendor/**/*
 - node_modules/**/*
 - webpack.config.js
