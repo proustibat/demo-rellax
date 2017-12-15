@@ -7,19 +7,48 @@
   $random: random($module-size-max);
   width: $random + px;
   height: $random + px;
-  //top: random($module-margin-max);
 }
 
-@mixin toggle-button($btnSelector, $disablingText, $enablingText, $parentActivatorClass) {
-  #{$btnSelector} {
+/// Random width and height
+/// @example css
+/// @include toggle-button('.btn-disable-rellax',
+///         'Disable Parallax',
+///         'Enable Parallax',
+///         '.rellax-disabled'
+/// );
+@mixin toggle-button($btn-selector, $disabling-text, $enabling-text, $parent-activator-class) {
+  #{$btn-selector} {
     &:before {
-      content: $disablingText
+      content: $disabling-text
     }
-    #{$parentActivatorClass} & {
+    #{$parent-activator-class} & {
       filter: invert(100%);
       &:before {
-        content: $enablingText
+        content: $enabling-text
       }
     }
+  }
+}
+
+/// Mixin to prefix several properties at once
+/// @author Hugo Giraudel
+/// @param {Map} $declarations - Declarations to prefix
+/// @param {List} $prefixes (()) - List of prefixes to print
+/// @example css
+///.selector {
+///  @include prefix((
+///          column-count: 3,
+///          column-gap: 1.5em,
+///          column-rule: 2px solid hotpink
+///  ), webkit moz);
+///}
+@mixin prefix($declarations, $prefixes: ()) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
   }
 }
