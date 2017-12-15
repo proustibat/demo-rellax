@@ -74,8 +74,3 @@ export default class App {
     }
 
 }
-
-// App.prototype = Object.assign( App.prototype, {
-//     container: document.body.querySelector( '.app' ),
-//     modules: []
-// });

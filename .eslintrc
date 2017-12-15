@@ -15,7 +15,6 @@
             "jsx": true
         }
     },
-
     "rules": {
 //        "semi": [2, "always"],
 //        "comma-dangle": [1, "never"],       // Disallow trailing commas in object literals         // var obj = { name: 'coucou', }

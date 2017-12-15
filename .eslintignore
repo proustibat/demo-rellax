@@ -1,9 +1,11 @@
 **/node_modules/
 !**/node_modules/etudiant-mod-**
 **/coverage/
+**/tests/
 **/dist/
 **/build/
 **/bower_components/
 **/*.min.js
 **/*.map
 **/*.json
+karma.conf.js
