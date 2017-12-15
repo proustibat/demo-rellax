@@ -26,6 +26,10 @@ install:
 #  - npm install -g babel-preset-es2015@6.24.1
 #  - npm install -g eslint@4.13.0
 
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
 script:
   - npm run build
 

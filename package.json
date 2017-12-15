@@ -13,7 +13,8 @@
     "start": "webpack-dev-server --progress --open --color --d",
     "build": "npm run lint && webpack -p --env build",
     "lint": "eslint . --ext .js",
-    "test": "karma start karma.conf.js --single-run --auto-watch",
+    "test": "karma start --browsers Firefox --single-run",
+    "test:local": "karma start karma.conf.js --single-run",
     "watch:test": "karma start karma.conf.js --log-level debug"
   },
   "engines": {
