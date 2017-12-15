@@ -95,9 +95,9 @@
     }
 
     &.triangle-up {
+      border-bottom: 40px solid $shape-color;
       border-left: 25px solid transparent;
       border-right: 25px solid transparent;
-      border-bottom: 40px solid $shape-color;
     }
 
     &.triangle-down {
@@ -108,15 +108,15 @@
     }
 
     &.triangle-left {
-      border-top: 25px solid transparent;
-      border-right: 40px solid $shape-color;
       border-bottom: 25px solid transparent;
+      border-right: 40px solid $shape-color;
+      border-top: 25px solid transparent;
     }
 
     &.triangle-right {
-      border-top: 25px solid transparent;
-      border-left: 40px solid $shape-color;
       border-bottom: 25px solid transparent;
+      border-left: 40px solid $shape-color;
+      border-top: 25px solid transparent;
     }
 
     &.diamond {
