@@ -23,16 +23,16 @@ h1 {
 
 .btn {
   background-color: $shape-color;
+  border: 1px solid $shape-color;
   color: $color-light;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 .5rem;
+  outline: none;
   padding: .5rem 1rem;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  cursor: pointer;
-  margin: 0 .5rem;
-  outline: none;
-  border: 1px solid $shape-color;
   transition : filter 300ms ease;
 }
 

@@ -18,12 +18,15 @@
 /// );
 @mixin toggle-button($btn-selector, $disabling-text, $enabling-text, $parent-activator-class) {
   #{$btn-selector} {
-    &:before {
+
+    &::before {
       content: $disabling-text
     }
+
     #{$parent-activator-class} & {
       filter: invert(100%);
-      &:before {
+
+      &::before {
         content: $enabling-text
       }
     }

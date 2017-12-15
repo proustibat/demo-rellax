@@ -2,7 +2,7 @@
   min-height: 100px;
   min-width: 100px;
   position: relative;
-  transition : filter 400ms ease;
+  transition: filter 400ms ease;
   width: 150px;
 
   .uid {
@@ -120,43 +120,43 @@
     }
 
     &.diamond {
+      background: none;
+      border-color: transparent transparent $shape-color;
       border-style: solid;
-      border-color: transparent transparent $shape-color transparent;
       border-width: 0 15px 15px 15px;
       height: 0;
-      width: 30px;
       position: relative;
-      background: none;
+      width: 30px;
     }
 
-    &.diamond:after {
-      content: "";
+    &.diamond::after {
+      border-color: $shape-color transparent transparent transparent;
+      border-style: solid;
+      border-width: 35px 30px 0;
+      content: '';
+      height: 0;
+      left: -15px;
       position: absolute;
       top: 15px;
-      left: -15px;
       width: 0;
-      height: 0;
-      border-style: solid;
-      border-color: $shape-color transparent transparent transparent;
-      border-width: 35px 30px 0 30px;
     }
 
 
     &.star-five {
-      top: calc(50% - 10px);
-      position: relative;
-      display: block;
-      color: $shape-color;
-      width: 0px;
-      height: 0px;
-      border-right: 25px solid transparent;
+      background: none;
       border-bottom: 16px solid $shape-color;
       border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      color: $shape-color;
+      display: block;
+      height: 0px;
+      position: relative;
+      top: calc(50% - 10px);
       transform: rotate(35deg);
-      background: none;
+      width: 0px;
     }
 
-    &.star-five:before {
+    &.star-five::before {
       position: absolute;
       height: 0;
       width: 0;
@@ -170,29 +170,29 @@
       left: -17px;
     }
 
-    &.star-five:after {
-      position: absolute;
-      display: block;
-      color: $shape-color;
-      transform: rotate(-70deg);
-      content: '';
-      top: 0;
-      left: -26px;
-      width: 0;
-      height: 0;
-      border-right: 25px solid transparent;
+    &.star-five::after {
       border-bottom: 17px solid $shape-color;
       border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      color: $shape-color;
+      content: '';
+      display: block;
+      height: 0;
+      left: -26px;
+      position: absolute;
+      top: 0;
+      transform: rotate(-70deg);
+      width: 0;
     }
   }
 }
 
 .shadows-enabled {
   .module {
-    @include prefix( ( filter: drop-shadow(0 10px 10px $color-drop-shadow-module ) ), webkit moz );
+    @include prefix((filter: drop-shadow(0 10px 10px $color-drop-shadow-module )), webkit moz);
   }
 
   .shape {
-    @include prefix( ( filter: drop-shadow( 0 10px 5px $color-drop-shadow-shape ) ), webkit moz );
+    @include prefix((filter: drop-shadow(0 10px 5px $color-drop-shadow-shape)), webkit moz);
   }
 }
