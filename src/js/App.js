@@ -29,13 +29,13 @@ export default class App {
         const btnSwitcherGray = document.createElement( 'button' );
         header.appendChild( btnSwitcherGray );
         btnSwitcherGray.setAttribute( 'class', 'btn btn-switcher-gray' );
-        btnSwitcherGray.addEventListener('click', () => document.body.classList.toggle( 'b-w' ) );
+        btnSwitcherGray.addEventListener( 'click', () => document.body.classList.toggle( 'b-w' ) );
 
 
         const btnEnableShadows = document.createElement( 'button' );
         header.appendChild( btnEnableShadows );
         btnEnableShadows.setAttribute( 'class', 'btn btn-enable-shadows' );
-        btnEnableShadows.addEventListener('click', () => document.body.classList.toggle( 'shadows-enabled' ) );
+        btnEnableShadows.addEventListener( 'click', () => document.body.classList.toggle( 'shadows-enabled' ) );
 
 
         const btnRellax = document.createElement( 'button' );

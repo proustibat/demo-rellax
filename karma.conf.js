@@ -65,7 +65,7 @@ module.exports =  config => {
             reports: ['html', 'lcov', 'text-summary', 'lcovonly'],
 
             // base output directory. If you include %browser% in the path it will be replaced with the karma browser name
-            dir: path.join(__dirname, 'coverage', '%browser%'),
+            dir: path.join(__dirname, 'cc-test-reporter', '%browser%'),
 
             // if using webpack and pre-loaders, work around webpack breaking the source path
             fixWebpackSourcePaths: true,
@@ -74,15 +74,15 @@ module.exports =  config => {
             skipFilesWithNoCoverage: true,
 
             // Most reporters accept additional config options. You can pass these through the `report-config` option
-            'report-config': {
-
-                // all options available at: https://github.com/istanbuljs/istanbuljs/blob/aae256fb8b9a3d19414dcf069c592e88712c32c6/packages/istanbul-reports/lib/html/index.js#L135-L137
-                html: {
-                    // outputs the report in ./coverage/html
-                    subdir: 'html'
-                }
-
-            },
+            // 'report-config': {
+            //
+            //     // all options available at: https://github.com/istanbuljs/istanbuljs/blob/aae256fb8b9a3d19414dcf069c592e88712c32c6/packages/istanbul-reports/lib/html/index.js#L135-L137
+            //     html: {
+            //         // outputs the report in ./coverage/html
+            //         subdir: 'html'
+            //     }
+            //
+            // },
         },
 
         // start these browsers
