@@ -6,9 +6,9 @@ Simple demo of the [Rellax lib](https://github.com/dixonandmoe/rellax)
 See the result here: [https://proustibat.github.io/demo-rellax](https://proustibat.github.io/demo-rellax/)
 
 ## Installation
-* run `npm install`
+* run `yarn install`
 
 ## Usage
 
-* `npm start` to start Webpack in watch mode - will recompile when you change a file.
-* `npm run build` to start Webpack in build mode - will create public files in dist folder
+* `yarn start` to start Webpack in watch mode - will recompile when you change a file.
+* `yarn build` to start Webpack in build mode - will create public files in dist folder
